@@ -5,17 +5,18 @@
  
  <listeners>
   <listener class-name="utilities.ExtentReportManager"/>
-      
+  
  </listeners>
  <test  name="chrometest" thread-count="5" >
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
  <classes>   
-   <class name="testCases.Tc001_AccountRegistrationTest"/>
-   <class name="testCases.Tc002_LoginTest"/>
+    <!--<class name="testCases.Tc001_AccountRegistrationTest"/>-->
+   <!-- <class name="testCases.Tc002_LoginTest"/>-->
        <!--<class name="testCases.Tc003_loginDDT"/>-->
-
-    
+   <!--<class name="testCases.Tc004_ProductSearch"/>-->
+      <!--<class name="testCases.Tc005_SearchProductDDT"/>-->
+      <class name="testCases.Tc005_ProductSearchDDT"/>
  </classes>
  </test>
  

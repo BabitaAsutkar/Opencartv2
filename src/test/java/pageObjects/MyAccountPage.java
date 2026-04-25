@@ -12,15 +12,14 @@ public class MyAccountPage extends BasePage {
 	
 	@FindBy(xpath="//h2[text()='My Account']")//MyAccount Page heading
 	WebElement msgHeading;
-	//@FindBy(xpath="ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Logout']")
 	@FindBy(xpath="//a[@class='list-group-item'][normalize-space()='Logout']")//logout on MYAccount  adde in 6 steps
-	WebElement InkLogout;//a[@class='list-group-item'][normalize-space()='Logout']"//div[@class='list-group']//a[text()='logout']
-	////ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Logout']
+	WebElement InkLogout;
 	public boolean isMyAccountPageExists() {
 		try {
 		return msgHeading.isDisplayed();
 		}catch(Exception e)
 		{
+	
 			return false;
 		}
 	}

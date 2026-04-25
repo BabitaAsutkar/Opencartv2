@@ -45,6 +45,11 @@ public class ExcelUtility {
 		workbook=new XSSFWorkbook(fi);
 		sheet=workbook.getSheet(sheetName);
 		row=sheet.getRow(rownum);
+		if(row==null) {
+			workbook.close();
+			fi.close();
+			return 0;
+		}
 		int cellcount=row.getLastCellNum();
 		workbook.close();
 		fi.close();
@@ -58,7 +63,17 @@ public class ExcelUtility {
 		workbook=new XSSFWorkbook(fi);
 		sheet=workbook.getSheet(sheetName);
 		row=sheet.getRow(rownum);
+		if(row==null) {
+			workbook.close();
+			fi.close();
+			return ""; // return empty string if the row doesn't exist
+		}
 		cell=row.getCell(colnum);
+		if(cell==null) {
+			workbook.close();
+			fi.close();
+			return "";
+		}
 		
 		DataFormatter formatter=new DataFormatter();
 		String data;

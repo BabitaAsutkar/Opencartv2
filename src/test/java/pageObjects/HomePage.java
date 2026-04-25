@@ -21,6 +21,12 @@ public class HomePage extends BasePage{
 	@FindBy(linkText = "Login")
 	//@FindBy(xpath="//a[normalize-space()='Login']")
 	WebElement linkLogin;
+	@FindBy(xpath="//input[@placeholder='Search']")
+	WebElement InkSearch;
+	@FindBy(xpath="//button[@class=\"btn btn-default btn-lg\"]")
+	WebElement InkSearchButton; 
+	@FindBy(xpath="//a[normalize-space()=\"Qafox.com\"]")
+	WebElement InkLogo;
 	
 	
 	public void clickMyAccount()      
@@ -52,6 +58,60 @@ public class HomePage extends BasePage{
 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", linkLogin);
 		}
 	}
+	
+	public void clickSearch()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(InkSearch)).click();
+		} catch(Exception e) {
+			
+			((JavascriptExecutor)driver).executeScript("arguments[0].click();", InkSearch);
+		}
+	}
+	public void setSearchProduct(String searchProductName)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		try {
+			WebElement search = wait.until(ExpectedConditions.visibilityOf(InkSearch));
+			try {
+				search.clear();
+			} catch (Exception ex) {
+				// ignore if clear isn't supported
+			}
+			if (searchProductName != null && !searchProductName.isEmpty()) {
+				search.sendKeys(searchProductName);
+			}
+		} catch(Exception e) {
+			// fallback to JS click to focus if visibility failed
+			((JavascriptExecutor)driver).executeScript("arguments[0].click();", InkSearch);
+		}
+		
+	}
+	
+	public void clickSearchButton()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		try {
+			wait.until(ExpectedConditions.visibilityOf(InkSearchButton));
+			wait.until(ExpectedConditions.elementToBeClickable(InkSearchButton)).click();
+		} catch(Exception e) {
+			
+			((JavascriptExecutor)driver).executeScript("arguments[0].click();", InkSearchButton);
+		}
+	}
+	
+	public void clickLogo()      
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(InkLogo)).click();
+		} catch(Exception e) {
+			
+			((JavascriptExecutor)driver).executeScript("arguments[0].click();", InkLogo);
+		}
+	}
+	
 	
 	
 	

@@ -3,12 +3,14 @@ C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\pageObjects\BasePage.j
 C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\pageObjects\HomePage.java
 C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\pageObjects\LoginPage.java
 C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\pageObjects\MyAccountPage.java
-C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\pageObjects\package-info.java
+C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\pageObjects\productMeetingTheSearchCriteriaPage.java
 C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\testBase\BaseClass.java
+C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\testCases\ProductSearchDDT.java
 C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\testCases\Tc001_AccountRegistrationTest.java
 C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\testCases\Tc002_LoginTest.java
 C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\testCases\Tc003_loginDDT.java
+C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\testCases\Tc004_ProductSearch.java
+C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\testCases\Tc005_SearchProductDDT.java
 C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\utilities\DataProviders.java
 C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\utilities\ExcelUtility.java
 C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\utilities\ExtentReportManager.java
-C:\Users\Shree\eclipse-workspace\Opencartv2\src\test\java\utilities\package-info.java

@@ -4,44 +4,17 @@
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" name="Linux-Chrome(failed)">
-    <parameter name="os" value="Linux"/>
+  <test thread-count="5" name="chrometest(failed)">
+    <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.Tc002_LoginTest">
+      <class name="testCases.Tc005_ProductSearchDDT">
         <methods>
-          <include name="tearDown"/>
-          <include name="Verify_Login"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testCases.Tc002_LoginTest -->
-      <class name="testCases.Tc001_AccountRegistrationTest">
-        <methods>
-          <include name="verify_account_registration"/>
+          <include name="verify_SearchProductDDT" invocation-numbers="2 3"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.Tc001_AccountRegistrationTest -->
+      </class> <!-- testCases.Tc005_ProductSearchDDT -->
     </classes>
-  </test> <!-- Linux-Chrome(failed) -->
-  <test thread-count="5" name="Linux-Firefox(failed)">
-    <parameter name="os" value="Linux"/>
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="testCases.Tc002_LoginTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="Verify_Login"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testCases.Tc002_LoginTest -->
-      <class name="testCases.Tc001_AccountRegistrationTest">
-        <methods>
-          <include name="verify_account_registration"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testCases.Tc001_AccountRegistrationTest -->
-    </classes>
-  </test> <!-- Linux-Firefox(failed) -->
+  </test> <!-- chrometest(failed) -->
 </suite> <!-- Failed suite [Master_Suite] -->

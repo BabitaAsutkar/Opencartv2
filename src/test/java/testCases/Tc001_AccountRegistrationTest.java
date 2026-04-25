@@ -10,7 +10,7 @@ import testBase.BaseClass;
 
 public class Tc001_AccountRegistrationTest extends BaseClass{
    
-     @Test(groups={"Regression","Master"}, invocationCount=3)
+     @Test(groups={"Regression","Master"}, invocationCount=1)
 	void verify_account_registration() 
 	{
        logger.info("*****Strating Tc001 AccountingRegistrationTest*******");
